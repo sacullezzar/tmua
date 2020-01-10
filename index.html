@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Toby Vincer - MUA - Actor - Singer</title>
+</head>
+<body>
+  <i class="material-icons" id="nav-button" onclick=displayNav()>chevron_right</i>
+
+  <div class="st-container">
+    <div id="nav-content">
+      <input type="radio" name="radio-set" id="st-control-1" />
+      <a href="#st-panel-1" id="portfolio-button"><i class="material-icons">face</i>About</a>
+      <input type="radio" name="radio-set" id="st-control-2" />
+      <a href="#st-panel-2" id="about-button"><i class="material-icons">brush</i>Portfolio</a>
+      <input type="radio" name="radio-set" id="st-control-3" />
+      <a href="#st-panel-3" id="contact-button"><i class="material-icons">attach_money</i>Prices</a>
+      <input type="radio" name="radio-set" id="st-control-4" />
+      <a href="#st-panel-4" id="prices-button"><i class="material-icons">feedback</i>Contact</a>
+    </div>
+    <div class="st-scroll">
+      <section class="st-panel" id="st-panel-1">
+          <h2>About</h2>
+          <div class="content-wrapper about-content">
+              Experienced personal and professional makeup artist with a successful career involving fashion brand collaborations, 
+              magazine features, prestige events and wedding services.
+          </div>
+      </section>
+      <section class="st-panel" id="st-panel-2">
+          <h2>Portfolio</h2>
+          <div class="content-wrapper portfolio-content">
+            <div class="mySlides fade">
+              <img src="./assets/images/picture1.jpg" alt="" srcset="">
+              <!-- <div class="image-caption">Caption Text</div> -->
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="./assets/images/picture2.jpg" alt="" srcset="">
+              <!-- <div class="image-caption">Caption Two</div> -->
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="./assets/images/picture3.jpg" alt="" srcset="">
+              <!-- <div class="image-caption">Caption Three</div> -->
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+          
+      </section>
+      <section class="st-panel" id="st-panel-3">
+          <h2>Prices</h2>
+          <div class="content-wrapper prices-content">
+            <table>
+              <tr>
+                <td>Collaborations & events</td>
+                <td>POA</td>
+              </tr>
+              <tr>
+                <td>Wedding Services</td>
+                <td>100 (Trial from 65)</td>
+              </tr>
+              <tr>
+                <td>Occasional Makeup</td>
+                <td>From 55 (Plus travel)</td>
+              </tr>
+            </table>
+          </div>
+      </section>
+      <section class="st-panel" id="st-panel-4">
+        <h2>Contact</h2>
+        <div class="content-wrapper contact-content">
+          <div class="social-icons">
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+          </div>
+          <div class="contact-details">
+            tobyvincer@live.com<br>
+            @TobyMua
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+      <div class="header">
+            <h4 class="header-title">
+                Toby Vincer
+            </h4>
+            <h6 class="header-sub-title">
+              makeup artist
+            </h6>
+            <div class="header-image">
+              <img src="./assets/images/coverPhoto.jpg" alt="" srcset="">
+            </div>
+            <hr />
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

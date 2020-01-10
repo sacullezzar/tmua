@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 5px solid lightblue; */
+}
+
+body {
+    overflow: 'hidden';
+    font-family: 'sans-copperplate_gothicRg';
+        background: #212121;
+}
+
+hr {
+    border: 2px solid #dbc8a2;
+}
+
+.header-image > img {
+    padding-top: 20px;
+    position: absolute;
+    left: 30px;
+    width: 80%;
+    opacity: 0.5;
+}
+
+.st-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.st-container > #nav-content > input,
+.st-container > #nav-content > a {
+	position: fixed;
+    width: max-content;
+    height: min-content;
+	cursor: pointer;
+	font-size: 24px;
+	line-height: 34px;
+}
+
+.st-container > #nav-content > input {
+	opacity: 0;
+	z-index: 1000;
+}
+
+.st-container > #nav-content > a {
+	z-index: 10;
+	font-weight: 700;
+	background: #212121;
+	color: #dbc8a2;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+}
+
+#st-control-1, #st-control-1 + a {
+	top: 10%;
+}
+
+#st-control-2, #st-control-2 + a {
+	top: 30%;
+}
+
+#st-control-3, #st-control-3 + a {
+	top: 50%;
+}
+
+#st-control-4, #st-control-4 + a {
+	top: 70%;
+}
+
+.st-scroll,
+.st-panel {
+	position: relative;
+	width: 50%;
+    height: 100%;
+    color: #dbc8a2;
+}
+
+.st-scroll {
+	left: 50%;
+	transition: all 0.6s ease-in-out;
+	
+	/* Let's enforce some hardware acceleration */
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+}
+
+.st-panel{
+	background: #212121;
+	overflow: hidden;
+}
+
+#st-control-1:checked ~ .st-scroll {
+	transform: translateY(0%);
+}
+#st-control-2:checked ~ .st-scroll {
+	transform: translateY(-100%);
+}
+#st-control-3:checked ~ .st-scroll {
+	transform: translateY(-200%);
+}
+#st-control-4:checked ~ .st-scroll {
+	transform: translateY(-300%);
+}
+
+.st-panel {
+    width: 100%;
+}
+
+.st-panel h2 {
+	color: #dbc8a2;
+	text-shadow: 1px 1px 1px rgba(151,24,64,0.2);
+	position: absolute;
+	font-size: 54px;
+	font-weight: 900;
+	width: max-content;
+	left: 20%;
+	text-align: center;
+	line-height: 50px;
+	margin: 0 0 0 0;
+	padding: 0;
+	top: 25%;
+	-webkit-backface-visibility: hidden;
+}
+
+.st-panel .content-wrapper {
+    color: #dbc8a2;
+    position: absolute;
+    left: 20%;
+    font-size: 30px;
+    top: 35%;
+    transition: 2s;
+    transition-timing-function: (.04,.38,.6,.87);
+}
+
+#nav-content {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 60h;
+    top: 25px;
+    left: -20%;
+    transition: 1s;
+    transition-timing-function: (.04,.38,.6,.87);
+}
+
+#nav-button {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 1000;
+}
+
+.material-icons {
+    color: #dbc8a2;
+    font-size: 50px;
+}
+
+.fa {
+    color: #dbc8a2;
+    text-decoration: none;
+}
+
+.header {
+    font-size: 100px;;
+    position: fixed;
+    color: #dbc8a2;
+    left: 20vw;
+    top: 20px;
+    background-color: #212121;
+}
+
+
+.mySlides {
+    display: none
+}
+
+.portfolio-content {
+    height: 50%;
+    width: 50%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+img {
+    width: 75%;
+    position: absolute;
+    left: 12.5%;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .image-caption {
+    color: #dbc8a2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
